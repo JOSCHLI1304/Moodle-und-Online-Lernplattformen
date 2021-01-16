@@ -1,0 +1,24 @@
+// Horde Konfiguration
+
+Wecheselt in das folgende Verzeichnis:
+cd ../usr/share/psa-horde/config
+
+In diesem Verzeichnis angekommen, müsst ihr die die beiden folgenden Konfigurationsdateien erstellen.
+
+nano prefs.local.php
+<?php 
+        $_prefs['language']['value'] = 'de_DE';
+        $_prefs['timezone']['value'] = 'Europe/Berlin';
+?>
+
+nano registry.local.php
+<?php 
+        $this->applications['turba']['status'] = 'inactive';
+        $this->applications['mnemo']['status'] = 'inactive';
+        $this->applications['kronolith']['status'] = 'inactive';
+        $this->applications['nag']['status'] = 'inactive';
+        $this->applications['others']['status'] = 'inactive';
+        $this->applications['ingo']['status'] = 'inactive';
+
+        $this->applications['horde']['initial_page'] = 'imp/dynamic.php?page=mailbox';
+?>
